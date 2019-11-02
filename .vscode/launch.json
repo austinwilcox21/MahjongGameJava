@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SeasonTile",
+            "request": "launch",
+            "mainClass": "SeasonTile"
+        }
+    ]
+}
