@@ -22,9 +22,6 @@ public class Tile extends JPanel
     private static GradientPaint GRAD4;
     private static GradientPaint GRAD5;
 
-    //USED FOR TESTING
-    private static ImageIcon image;
-
     public Tile()
     {
         setPreferredSize(SIZE);
@@ -57,7 +54,6 @@ public class Tile extends JPanel
             g2.setColor(Color.BLACK);
             g2.draw(FACE);
 
-            
 
             g2.setColor(Color.BLACK);
             g2.draw(SIDE2);
@@ -71,7 +67,6 @@ public class Tile extends JPanel
 
     static
     {
-        image = new ImageIcon("images/Bamboo.png");
 
         SIZE = new Dimension(121, 121);
 

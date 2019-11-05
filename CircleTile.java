@@ -22,68 +22,68 @@ public class CircleTile extends RankTile
         switch(rank)
         {
             case 1: 
-                circles.add(new Circle(60, 40, Color.RED)); //Center
+                circles.add(new Pancake(60, 40, Color.RED)); //Center
                 break;
             case 2: 
-                circles.add(new Circle(60, 20, Color.GREEN)); //2nd From Top
-                circles.add(new Circle(60, 60, Color.RED)); //2nd from Bottom
+                circles.add(new Pancake(60, 20, Color.GREEN)); //2nd From Top
+                circles.add(new Pancake(60, 60, Color.RED)); //2nd from Bottom
                 break;
             case 3: 
-                circles.add(new Circle(60, 40, Color.RED)); //Center
-                circles.add(new Circle(40, 10, Color.BLUE)); //Top pad 10
-                circles.add(new Circle(80, 70, Color.GREEN)); //Bottom pad 10
+                circles.add(new Pancake(60, 40, Color.RED)); //Center
+                circles.add(new Pancake(40, 10, Color.BLUE)); //Top pad 10
+                circles.add(new Pancake(80, 70, Color.GREEN)); //Bottom pad 10
                 break;
             case 4: 
-                circles.add(new Circle(40, 20, Color.BLUE)); //2nd From Top
-                circles.add(new Circle(40, 60, Color.GREEN)); //2nd from Bottom
-                circles.add(new Circle(80, 20, Color.GREEN)); //2nd From Top
-                circles.add(new Circle(80, 60, Color.BLUE)); //2nd from Bottom
+                circles.add(new Pancake(40, 20, Color.BLUE)); //2nd From Top
+                circles.add(new Pancake(40, 60, Color.GREEN)); //2nd from Bottom
+                circles.add(new Pancake(80, 20, Color.GREEN)); //2nd From Top
+                circles.add(new Pancake(80, 60, Color.BLUE)); //2nd from Bottom
                 break;
             case 5: 
-                circles.add(new Circle(30, 10, Color.BLUE)); //2nd From Top
-                circles.add(new Circle(30, 70, Color.GREEN)); //2nd from Bottom
-                circles.add(new Circle(90, 10, Color.GREEN)); //2nd From Top
-                circles.add(new Circle(90, 70, Color.BLUE)); //2nd from Bottom
-                circles.add(new Circle(60, 40, Color.RED)); //Center
+                circles.add(new Pancake(30, 10, Color.BLUE)); //2nd From Top
+                circles.add(new Pancake(30, 70, Color.GREEN)); //2nd from Bottom
+                circles.add(new Pancake(90, 10, Color.GREEN)); //2nd From Top
+                circles.add(new Pancake(90, 70, Color.BLUE)); //2nd from Bottom
+                circles.add(new Pancake(60, 40, Color.RED)); //Center
                 break;
             case 6: 
-                circles.add(new Circle(40, 10, Color.GREEN)); //2nd From Top
-                circles.add(new Circle(80, 10, Color.GREEN)); //2nd from Bottom
-                circles.add(new Circle(40, 40, Color.RED)); //2nd From Top
-                circles.add(new Circle(80, 40, Color.RED)); //2nd from Bottom
-                circles.add(new Circle(40, 70, Color.RED)); //2nd From Top
-                circles.add(new Circle(80, 70, Color.RED)); //2nd from Bottom
+                circles.add(new Pancake(40, 10, Color.GREEN)); //2nd From Top
+                circles.add(new Pancake(80, 10, Color.GREEN)); //2nd from Bottom
+                circles.add(new Pancake(40, 40, Color.RED)); //2nd From Top
+                circles.add(new Pancake(80, 40, Color.RED)); //2nd from Bottom
+                circles.add(new Pancake(40, 70, Color.RED)); //2nd From Top
+                circles.add(new Pancake(80, 70, Color.RED)); //2nd from Bottom
                 break;
             case 7: 
-                circles.add(new Circle(30, 5,  Color.GREEN)); //Center
-                circles.add(new Circle(60, 15, Color.GREEN)); //Top pad 10
-                circles.add(new Circle(90, 25, Color.GREEN)); //Bottom pad 10
+                circles.add(new Pancake(30, 5,  Color.GREEN)); //Center
+                circles.add(new Pancake(60, 15, Color.GREEN)); //Top pad 10
+                circles.add(new Pancake(90, 25, Color.GREEN)); //Bottom pad 10
                 
-                circles.add(new Circle(40, 49, Color.RED)); //2nd From Top
-                circles.add(new Circle(80, 49, Color.RED)); //2nd from Bottom
-                circles.add(new Circle(40, 71, Color.RED)); //2nd From Top
-                circles.add(new Circle(80, 71, Color.RED)); //2nd from Bottom
+                circles.add(new Pancake(40, 49, Color.RED)); //2nd From Top
+                circles.add(new Pancake(80, 49, Color.RED)); //2nd from Bottom
+                circles.add(new Pancake(40, 71, Color.RED)); //2nd From Top
+                circles.add(new Pancake(80, 71, Color.RED)); //2nd from Bottom
                 break;
             case 8: 
-                circles.add(new Circle(40, 5,  Color.BLUE)); //2nd From Top
-                circles.add(new Circle(40, 27, Color.BLUE)); //2nd from Bottom
-                circles.add(new Circle(40, 49, Color.BLUE)); //2nd From Top
-                circles.add(new Circle(40, 71, Color.BLUE)); //2nd from Bottomcircles.add(new Circle(40, 20, Color.GREEN)); //2nd From Top
-                circles.add(new Circle(80, 5,  Color.BLUE)); //2nd from Bottom
-                circles.add(new Circle(80, 27, Color.BLUE)); //2nd From Top
-                circles.add(new Circle(80, 49, Color.BLUE)); //2nd from Bottom
-                circles.add(new Circle(80, 71, Color.BLUE)); //2nd from Bottom
+                circles.add(new Pancake(40, 5,  Color.BLUE)); //2nd From Top
+                circles.add(new Pancake(40, 27, Color.BLUE)); //2nd from Bottom
+                circles.add(new Pancake(40, 49, Color.BLUE)); //2nd From Top
+                circles.add(new Pancake(40, 71, Color.BLUE)); //2nd from Bottomcircles.add(new Circle(40, 20, Color.GREEN)); //2nd From Top
+                circles.add(new Pancake(80, 5,  Color.BLUE)); //2nd from Bottom
+                circles.add(new Pancake(80, 27, Color.BLUE)); //2nd From Top
+                circles.add(new Pancake(80, 49, Color.BLUE)); //2nd from Bottom
+                circles.add(new Pancake(80, 71, Color.BLUE)); //2nd from Bottom
                 break;
             case 9: 
-                circles.add(new Circle(30, 10, Color.GREEN)); //2nd From Top
-                circles.add(new Circle(60, 10, Color.GREEN)); //2nd from Bottom
-                circles.add(new Circle(90, 10, Color.GREEN)); //2nd From Top
-                circles.add(new Circle(30, 40, Color.RED)); //2nd from Bottom
-                circles.add(new Circle(60, 40, Color.RED)); //2nd From Top
-                circles.add(new Circle(90, 40, Color.RED)); //2nd from Bottom
-                circles.add(new Circle(30, 70, Color.BLUE)); //2nd From Top
-                circles.add(new Circle(60, 70, Color.BLUE)); //2nd from Bottom
-                circles.add(new Circle(90, 70, Color.BLUE)); //2nd From Top
+                circles.add(new Pancake(30, 10, Color.GREEN)); //2nd From Top
+                circles.add(new Pancake(60, 10, Color.GREEN)); //2nd from Bottom
+                circles.add(new Pancake(90, 10, Color.GREEN)); //2nd From Top
+                circles.add(new Pancake(30, 40, Color.RED)); //2nd from Bottom
+                circles.add(new Pancake(60, 40, Color.RED)); //2nd From Top
+                circles.add(new Pancake(90, 40, Color.RED)); //2nd from Bottom
+                circles.add(new Pancake(30, 70, Color.BLUE)); //2nd From Top
+                circles.add(new Pancake(60, 70, Color.BLUE)); //2nd from Bottom
+                circles.add(new Pancake(90, 70, Color.BLUE)); //2nd From Top
                 break;
             default: 
                 System.err.println("ERROR Index Out Of Bounds");
@@ -127,6 +127,24 @@ public class CircleTile extends RankTile
             g.setColor(this.color);
             g.fillOval(this.x, this.y, 20, 20);
         }
+    }
+
+    public class Pancake extends Circle
+    {
+
+        public Pancake(Integer x, Integer y, Color c) {
+            super(x, y, c);
+        }
+
+        public void draw(Graphics g)
+        {
+            super.draw(g);
+
+            g.setColor(Color.WHITE);
+            g.drawLine(super.x + 3, super.y + 3, super.x + 17, super.y + 17);
+            g.drawLine(super.x + 20, super.y, super.x, super.y + 20);
+        }
+        
     }
 
     // public class Pancake extends Circle
