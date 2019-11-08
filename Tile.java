@@ -22,6 +22,9 @@ public class Tile extends JPanel
     private static GradientPaint GRAD4;
     private static GradientPaint GRAD5;
 
+    public static Color DarkGreen;
+    public static Color LightGreen;
+
     public Tile()
     {
         setPreferredSize(SIZE);
@@ -90,11 +93,15 @@ public class Tile extends JPanel
 
         FACE = new Rectangle(20, 0, 100, 100);
 
-        GRAD1 = new GradientPaint(20, 100, Color.WHITE, 120, 0, Color.WHITE);
-        GRAD2 = new GradientPaint(10, 110, Color.WHITE, 20, 0, Color.WHITE);
-        GRAD3 = new GradientPaint(10, 120, Color.WHITE, 110, 100, Color.RED);
-        GRAD4 = new GradientPaint(0, 120, Color.GREEN, 0, 10, Color.WHITE);
-        GRAD5 = new GradientPaint(0, 120, Color.GREEN, 110, 100, Color.WHITE);
+        Color ivoryColor = new Color(255, 255, 240);
+        DarkGreen = new Color(0, 179, 39);
+        LightGreen = new Color(0, 240, 39);
+
+        GRAD1 = new GradientPaint(20, 100, ivoryColor, 120, 0, ivoryColor);
+        GRAD2 = new GradientPaint(10, 110, ivoryColor, 20, 0, ivoryColor);
+        GRAD3 = new GradientPaint(10, 120, ivoryColor, 110, 100, ivoryColor);
+        GRAD4 = new GradientPaint(0, 120, LightGreen, 0, 10, DarkGreen);
+        GRAD5 = new GradientPaint(0, 120, LightGreen, 110, 100, DarkGreen);
     }
 
     

@@ -113,7 +113,7 @@ public class CharacterTile extends Tile
             }
             else if(this.symbol == 'F')
             {
-                g.setColor(Color.GREEN);
+                g.setColor(super.DarkGreen);
             }
             else
             {

@@ -37,7 +37,7 @@ public abstract class PictureTile extends Tile
 	public void paintComponent(Graphics g)
 	{
 		super.paintComponent(g);
-        image.paintIcon(this, g, (getWidth() / 2 - 35), getHeight() - 115);
+        image.paintIcon(this, g, (getWidth() / 2 - 38), getHeight() - 120);
 	}
 
     public static void main(String[] args) {
