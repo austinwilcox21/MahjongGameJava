@@ -7,6 +7,7 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
 
+@SuppressWarnings("serial")
 public class CharacterTile extends Tile
 {
     protected char symbol;

@@ -7,6 +7,7 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
 
+@SuppressWarnings("serial")
 public class FlowerTile extends PictureTile
 {
     public FlowerTile(String incomingName) {

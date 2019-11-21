@@ -7,6 +7,7 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
 
+@SuppressWarnings("serial")
 public abstract class PictureTile extends Tile
 {
 	private String name;

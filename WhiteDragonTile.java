@@ -9,7 +9,7 @@ import java.net.*;
 import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
-
+@SuppressWarnings("serial")
 public class WhiteDragonTile extends Tile
 {
 	public WhiteDragonTile() {

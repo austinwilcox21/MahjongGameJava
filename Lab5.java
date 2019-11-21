@@ -3,7 +3,7 @@ import	java.awt.event.*;
 import	java.util.*;
 import	javax.swing.*;
 
-
+@SuppressWarnings("serial")
 public class Lab5 extends JFrame
 {
 	private	GridBagLayout		layout = new GridBagLayout();

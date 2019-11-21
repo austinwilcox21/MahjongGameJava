@@ -6,7 +6,7 @@ import java.net.*;
 import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
-
+@SuppressWarnings("serial")
 public class SeasonTile extends PictureTile
 {
     public SeasonTile(String incomingName) {

@@ -6,7 +6,7 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
 
-
+@SuppressWarnings("serial")
 //Add abstract back into here.
 public class Tile extends JPanel
 {
