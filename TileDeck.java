@@ -1,6 +1,6 @@
 import	java.util.*;
 
-@SuppressWarnings("serial")
+
 public class TileDeck
 {
 	private	ArrayList<Tile>	deck = new ArrayList<>(144);

@@ -9,7 +9,7 @@ import java.net.*;
 import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
-
+@SuppressWarnings("serial")
 public class CircleTile extends RankTile
 {
     protected ArrayList<Circle> circles;
@@ -25,39 +25,39 @@ public class CircleTile extends RankTile
                 circles.add(new Pancake(60, 40, Color.RED)); //Center
                 break;
             case 2: 
-                circles.add(new Circle(60, 20, super.DarkGreen)); //2nd From Top
+                circles.add(new Circle(60, 20, Tile.DarkGreen)); //2nd From Top
                 circles.add(new Circle(60, 60, Color.RED)); //2nd from Bottom
                 break;
             case 3: 
                 circles.add(new Circle(60, 40, Color.RED)); //Center
                 circles.add(new Circle(40, 10, Color.BLUE)); //Top pad 10
-                circles.add(new Circle(80, 70, super.DarkGreen)); //Bottom pad 10
+                circles.add(new Circle(80, 70, Tile.DarkGreen)); //Bottom pad 10
                 break;
             case 4: 
                 circles.add(new Circle(40, 20, Color.BLUE)); //2nd From Top
-                circles.add(new Circle(40, 60, super.DarkGreen)); //2nd from Bottom
-                circles.add(new Circle(80, 20, super.DarkGreen)); //2nd From Top
+                circles.add(new Circle(40, 60, Tile.DarkGreen)); //2nd from Bottom
+                circles.add(new Circle(80, 20, Tile.DarkGreen)); //2nd From Top
                 circles.add(new Circle(80, 60, Color.BLUE)); //2nd from Bottom
                 break;
             case 5: 
                 circles.add(new Circle(30, 10, Color.BLUE)); //2nd From Top
-                circles.add(new Circle(30, 70, super.DarkGreen)); //2nd from Bottom
-                circles.add(new Circle(90, 10, super.DarkGreen)); //2nd From Top
+                circles.add(new Circle(30, 70, Tile.DarkGreen)); //2nd from Bottom
+                circles.add(new Circle(90, 10, Tile.DarkGreen)); //2nd From Top
                 circles.add(new Circle(90, 70, Color.BLUE)); //2nd from Bottom
                 circles.add(new Circle(60, 40, Color.RED)); //Center
                 break;
             case 6: 
-                circles.add(new Circle(40, 10, super.DarkGreen)); //2nd From Top
-                circles.add(new Circle(80, 10, super.DarkGreen)); //2nd from Bottom
+                circles.add(new Circle(40, 10, Tile.DarkGreen)); //2nd From Top
+                circles.add(new Circle(80, 10, Tile.DarkGreen)); //2nd from Bottom
                 circles.add(new Circle(40, 40, Color.RED)); //2nd From Top
                 circles.add(new Circle(80, 40, Color.RED)); //2nd from Bottom
                 circles.add(new Circle(40, 70, Color.RED)); //2nd From Top
                 circles.add(new Circle(80, 70, Color.RED)); //2nd from Bottom
                 break;
             case 7: 
-                circles.add(new Circle(30, 5,  super.DarkGreen)); //Center
-                circles.add(new Circle(60, 15, super.DarkGreen)); //Top pad 10
-                circles.add(new Circle(90, 25, super.DarkGreen)); //Bottom pad 10
+                circles.add(new Circle(30, 5,  Tile.DarkGreen)); //Center
+                circles.add(new Circle(60, 15, Tile.DarkGreen)); //Top pad 10
+                circles.add(new Circle(90, 25, Tile.DarkGreen)); //Bottom pad 10
                 
                 circles.add(new Circle(40, 49, Color.RED)); //2nd From Top
                 circles.add(new Circle(80, 49, Color.RED)); //2nd from Bottom
@@ -75,9 +75,9 @@ public class CircleTile extends RankTile
                 circles.add(new Circle(80, 71, Color.BLUE)); //2nd from Bottom
                 break;
             case 9: 
-                circles.add(new Circle(30, 10, super.DarkGreen)); //2nd From Top
-                circles.add(new Circle(60, 10, super.DarkGreen)); //2nd from Bottom
-                circles.add(new Circle(90, 10, super.DarkGreen)); //2nd From Top
+                circles.add(new Circle(30, 10, Tile.DarkGreen)); //2nd From Top
+                circles.add(new Circle(60, 10, Tile.DarkGreen)); //2nd from Bottom
+                circles.add(new Circle(90, 10, Tile.DarkGreen)); //2nd From Top
                 circles.add(new Circle(30, 40, Color.RED)); //2nd from Bottom
                 circles.add(new Circle(60, 40, Color.RED)); //2nd From Top
                 circles.add(new Circle(90, 40, Color.RED)); //2nd from Bottom
