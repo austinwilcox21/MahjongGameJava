@@ -70,7 +70,6 @@ public class Tile extends JPanel
 
     static
     {
-
         SIZE = new Dimension(121, 121);
 
 
