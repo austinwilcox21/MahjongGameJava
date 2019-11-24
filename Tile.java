@@ -27,7 +27,10 @@ public class Tile extends JPanel
 
     public Tile()
     {
-        setPreferredSize(SIZE);
+        //Recommendeed in his video to change this to setSize instead of preferred size.
+        //setPreferredSize(SIZE);
+        setSize(SIZE);
+        setOpaque(false);
     }
 
     public void paintComponent(Graphics g)

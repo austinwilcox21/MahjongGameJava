@@ -12,6 +12,7 @@ public class TileDeck
 			// CharacterTiles
 			for (char c = '1'; c <= '9'; c++)
 				deck.add(new CharacterTile(c));
+				
 			deck.add(new CharacterTile('N'));
 			deck.add(new CharacterTile('E'));
 			deck.add(new CharacterTile('W'));
