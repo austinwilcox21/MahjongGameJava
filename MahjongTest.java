@@ -9,6 +9,8 @@ public class MahjongTest extends JFrame
         add(new TestPanel());
 
         setSize(1800, 1000);
+
+        
         setVisible(true);
 
     }
@@ -36,6 +38,8 @@ public class MahjongTest extends JFrame
             addRow2();
             addRow1();
             addWeirdTiles2();
+
+            setBackground(Color.BLUE);
 
             
             //This will create a 4 column stack of tiles

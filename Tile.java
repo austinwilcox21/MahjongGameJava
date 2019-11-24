@@ -25,6 +25,10 @@ public class Tile extends JPanel
     public static Color DarkGreen;
     public static Color LightGreen;
 
+    public int xPosition;
+    public int yPosition;
+    public int zPosition;
+
     public Tile()
     {
         //Recommendeed in his video to change this to setSize instead of preferred size.
