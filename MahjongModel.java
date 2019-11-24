@@ -1,26 +1,51 @@
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
+import java.awt.event.*;
 
 import javax.swing.*;
 
 public class MahjongModel implements MouseListener
 {
     private ArrayList<Tile> tiles = new ArrayList<>(144);
-    private TileDeck deck = new TileDeck();
     public static void main(String[] args) {
-        
+        getAllTiles();
     }
 
-    public void getAllTiles()
+    public static void getAllTiles()
     {
-        deck.shuffle(10);
-
-        for(int i = 0; i < 144; i++)
+        //0 Means it's 
+        for(int z = 4; z <= 0; z--)
         {
-            Tile t = deck.deal();
-            t.addMouseListener(this);
-            tiles.add(t);
+            for(int x = 0; x < 8; x++)
+            {
+                for(int y = 0; y < 15; y++)
+                {
+
+                    switch(z)
+                    {
+                    case 4: break;
+                    case 3: break;
+                    case 2: break;
+                    case 1: break;
+                    case 0: break;
+                    default: break;   
+                    }
+                }
+                switch(z)
+                {
+                    case 4: 
+                    
+                    break;
+                    case 3: 
+                    
+                    break;
+                    case 2: break;
+                    case 1: break;
+                    case 0: break;
+                    default: break;   
+                }
+            }
         }
     }
 

@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - MahjongModel",
+            "request": "launch",
+            "mainClass": "MahjongModel"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - SeasonTile",
             "request": "launch",
             "mainClass": "SeasonTile"
