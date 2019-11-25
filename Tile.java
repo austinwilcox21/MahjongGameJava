@@ -28,6 +28,7 @@ public class Tile extends JPanel
     public int xPosition;
     public int yPosition;
     public int zPosition;
+    public boolean isVisible = true;
 
     public Tile()
     {
