@@ -1,35 +1,65 @@
 import javax.swing.JPanel;
 import javax.swing.event.MouseInputListener;
+import java.awt.*;
+import javax.swing.*;
+import java.net.*;
+import java.awt.event.*;
+
 @SuppressWarnings("serial")
-public class MahjongBoard extends JPanel // implements MouseInputListener
+public class MahjongBoard extends JPanel  implements MouseListener
 {
     public MahjongModel myModel;
 
     public MahjongBoard() {
+        myModel = new MahjongModel();
 
         setLayout(null);
-        myModel = new MahjongModel();
+        paintBoard();
+        
+    }
+
+    protected void paintComponent(Graphics g)
+    {
+        super.paintComponent(g);
+        
+		ImageIcon image = new ImageIcon("images/dragon_bg.png");
+        
+        image = new ImageIcon(image.getImage().getScaledInstance(1700, 1000, Image.SCALE_SMOOTH));
+        g.drawImage(image.getImage(), 0, 0, null);
+    }
+
+    public void paintBoard()
+    {
         for (Tile tile : myModel.gameDeck) {
             if(tile.isVisible)
             {
                 tile.setLocation(tile.xPosition, tile.yPosition);
+                tile.addMouseListener(this);
                 add(tile);
             }
         }
     }
 
-    // public void mousePressed(mouseEvent e)
-    // {
-    //     Tile t = (Tile)e.getSource();
+    public void mousePressed(MouseEvent e)
+    {
+        Tile t = (Tile)e.getSource();
+        System.out.println(t.isVisible);
+        System.out.println(t.toString());
 
-    //     if(e.getButton() == mouseEvent.BUTTON3)
-    //     {
-    //         System.out.println("Reached");
-    //     }
-    // }
+        System.out.println(t.getParent().getComponentZOrder(t));
 
-    // public void mouseReleased(mouseEvent e){}
-    // public void mouseClicked(mouseEvent e){}
-    // public void mouseEntered(mouseEvent e){}
-    // public void mouseExited(mouseEvent e){}
+        t.setBackground(Color.BLUE);
+
+        t.removeMouseListener(this);
+        t.isVisible = false;
+        t.setVisible(false);
+
+        remove(t);
+        revalidate();
+    }
+
+    public void mouseReleased(MouseEvent e){}
+    public void mouseClicked(MouseEvent e){}
+    public void mouseEntered(MouseEvent e){}
+    public void mouseExited(MouseEvent e){}
 }

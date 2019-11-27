@@ -11,6 +11,7 @@ public class Mahjong extends JFrame
 
         add(new MahjongBoard());
 
+        
         setVisible(true);
     }
 
