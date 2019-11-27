@@ -109,67 +109,67 @@ public class CircleTile extends RankTile
         }
     }
 
-    public class Circle
-    {
-        private Integer x;
-        private Integer y;
-        private Color color;
+    // public class Circle
+    // {
+    //     private Integer x;
+    //     private Integer y;
+    //     private Color color;
 
-        public Circle(Integer x, Integer y, Color c)
-        {
-            this.x = x;
-            this.y = y;
-            this.color = c;
-        }
+    //     public Circle(Integer x, Integer y, Color c)
+    //     {
+    //         this.x = x;
+    //         this.y = y;
+    //         this.color = c;
+    //     }
 
-        public void draw(Graphics g)
-        {
-            g.setColor(this.color);
-            g.fillOval(this.x, this.y, 20, 20);
+    //     public void draw(Graphics g)
+    //     {
+    //         g.setColor(this.color);
+    //         g.fillOval(this.x, this.y, 20, 20);
 
-            //TODO
-            //still drawing the x to far.
-            g.setColor(Color.WHITE);
-            g.drawLine(this.x + 3, this.y + 3, this.x + 17, this.y + 17);
-            //g.drawLine(this.x + 20, this.y, this.x, this.y + 20);
-            g.drawLine(this.x + 17, this.y, this.x, this.y + 17);
-        }
-    }
+    //         //TODO
+    //         //still drawing the x to far.
+    //         g.setColor(Color.WHITE);
+    //         g.drawLine(this.x + 3, this.y + 3, this.x + 17, this.y + 17);
+    //         //g.drawLine(this.x + 20, this.y, this.x, this.y + 20);
+    //         g.drawLine(this.x + 17, this.y, this.x, this.y + 17);
+    //     }
+    // }
 
-    public class Pancake extends Circle
-    {
+    // public class Pancake extends Circle
+    // {
 
-        public Pancake(Integer x, Integer y, Color c) {
-            super(x, y, c);
-        }
+    //     public Pancake(Integer x, Integer y, Color c) {
+    //         super(x, y, c);
+    //     }
 
-        public void draw(Graphics g)
-        {
-            g.setColor(new Color(0, 179, 39));
-            g.fillOval(super.x - 27, super.y - 27, 75, 75);
+    //     public void draw(Graphics g)
+    //     {
+    //         g.setColor(new Color(0, 179, 39));
+    //         g.fillOval(super.x - 27, super.y - 27, 75, 75);
 
-            g.setColor(Color.WHITE);
+    //         g.setColor(Color.WHITE);
 
-            //Top And Bottom
-            g.fillOval(super.x + 7, super.y - 25, 5, 5);
-            g.fillOval(super.x + 7, super.y + 38, 5, 5);
+    //         //Top And Bottom
+    //         g.fillOval(super.x + 7, super.y - 25, 5, 5);
+    //         g.fillOval(super.x + 7, super.y + 38, 5, 5);
 
-            //Left and Right
-            g.fillOval(super.x + 40, super.y + 5, 5, 5);
-            g.fillOval(super.x - 25, super.y + 5, 5, 5);
+    //         //Left and Right
+    //         g.fillOval(super.x + 40, super.y + 5, 5, 5);
+    //         g.fillOval(super.x - 25, super.y + 5, 5, 5);
 
-            g.fillOval(super.x + 30, super.y + 28, 5, 5);
-            g.fillOval(super.x - 16, super.y - 15, 5, 5);
+    //         g.fillOval(super.x + 30, super.y + 28, 5, 5);
+    //         g.fillOval(super.x - 16, super.y - 15, 5, 5);
 
-            g.fillOval(super.x - 16, super.y + 28, 5, 5);
-            g.fillOval(super.x + 30, super.y - 15, 5, 5);
+    //         g.fillOval(super.x - 16, super.y + 28, 5, 5);
+    //         g.fillOval(super.x + 30, super.y - 15, 5, 5);
 
-            super.draw(g);
+    //         super.draw(g);
 
             
-        }
+    //     }
         
-    }
+    // }
 
     public static void main(String[] args) {
         JFrame	frame = new JFrame();

@@ -22,7 +22,8 @@ public class MahjongBoard extends JPanel  implements MouseListener
     {
         super.paintComponent(g);
         
-		ImageIcon image = new ImageIcon("images/dragon_bg.png");
+        URL url = MahjongBoard.class.getResource("images/dragon_bg.png");
+		ImageIcon image = new ImageIcon(url);
         
         image = new ImageIcon(image.getImage().getScaledInstance(1700, 1000, Image.SCALE_SMOOTH));
         g.drawImage(image.getImage(), 0, 0, null);

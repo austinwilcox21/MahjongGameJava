@@ -18,11 +18,13 @@ public abstract class PictureTile extends Tile
 		
 		if(this.name == "Sparrow")
 		{
-			image = new ImageIcon("images/Sparrow.png");
+			URL url = PictureTile.class.getResource("/images/Sparrow.png");
+			image = new ImageIcon(url);
 		}
 		else
 		{
-			image = new ImageIcon("images/" + this.toString() + ".png");
+			URL url = PictureTile.class.getResource("/images/" + this.toString() + ".png");
+			image = new ImageIcon(url);
 		}
         
         image = new ImageIcon(image.getImage().getScaledInstance((int)(image.getIconWidth() * 1.5), -1, Image.SCALE_SMOOTH));

@@ -10,6 +10,7 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
 
+@SuppressWarnings("serial")
 public class BambooTile extends RankTile
 {
     protected ArrayList<Bamboo> bambooTiles;
@@ -103,43 +104,6 @@ public class BambooTile extends RankTile
             {
                 b.draw(g);
             }
-        }
-    }
-
-    public class Bamboo
-    {
-        private Integer x;
-        private Integer y;
-        private Color color;
-
-        public Bamboo(Integer x, Integer y, Color c)
-        {
-            this.x = x;
-            this.y = y;
-            this.color = c;
-        }
-
-        public void draw(Graphics g)
-        {
-            g.setColor(this.color);
-            g.drawRoundRect(this.x, this.y, 15, 25, 5, 5);
-            g.fill3DRect(this.x - 3, this.y, 21, 5, true);
-            g.fill3DRect(this.x - 3, this.y + 25, 21, 5, true);
-            g.fill3DRect(this.x - 3, this.y + 13, 21, 5, true);
-        }
-    }
-
-    public class RotatedBamboo extends Bamboo
-    {
-        public RotatedBamboo(Integer x, Integer y, Color c) {
-            super(x, y, c);
-        }
-
-        public void draw(Graphics g)
-        {
-            super.draw(g);
-
-
         }
     }
 
