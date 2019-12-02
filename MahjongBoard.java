@@ -44,19 +44,164 @@ public class MahjongBoard extends JPanel  implements MouseListener
     public void mousePressed(MouseEvent e)
     {
         Tile t = (Tile)e.getSource();
-        System.out.println(t.isVisible);
-        System.out.println(t.toString());
+        
+        if(isClickable(t))
+        {
+            t.setBorder(BorderFactory.createMatteBorder(6, 6, 6, 6, Color.RED));
+            t.IsClicked = true;
 
-        System.out.println(t.getParent().getComponentZOrder(t));
+            //Loop through all the tiles that are visible, and figure out if any are clicked, if one is, I need to grab it.
+            Tile firstTile = new Tile();
+            Tile secondTile = new Tile();
 
-        t.setBackground(Color.BLUE);
+            boolean found = false;
+            for (Tile t2 : myModel.gameDeck)
+            {
+                if(t2.isVisible && t2.IsClicked)
+                {
+                    if(!found)
+                    {
+                        firstTile = t2;
+                        found = true;
+                    }
+                    else{
+                        secondTile = t2;
+                        if(firstTile.matches(secondTile) && !firstTile.equals(secondTile))
+                        {
+                            System.out.println("Reached the equals method");
+                            firstTile.removeMouseListener(this);
+                            firstTile.isVisible = false;
+                            firstTile.setVisible(false);
 
-        t.removeMouseListener(this);
-        t.isVisible = false;
-        t.setVisible(false);
+                            remove(firstTile);
+                            secondTile.removeMouseListener(this);
+                            secondTile.isVisible = false;
+                            secondTile.setVisible(false);
 
-        remove(t);
-        revalidate();
+                            remove(secondTile);
+
+                            revalidate();
+                        }
+
+                        firstTile.IsClicked = false;
+                        secondTile.IsClicked = false;
+                        firstTile.setBorder(BorderFactory.createEmptyBorder());
+                        secondTile.setBorder(BorderFactory.createEmptyBorder());
+                    }
+                }
+            }
+        }
+        // t.setBackground(Color.BLUE);
+
+        // t.removeMouseListener(this);
+        // t.isVisible = false;
+        // t.setVisible(false);
+
+        // remove(t);
+        // revalidate();
+    }
+
+    public boolean isClickable(Tile t)
+    {
+        boolean isRightSide = isTileOnRightSide(t);
+        boolean isLeftSide = isTileOnLeftSide(t);
+        boolean isTileOnTop = isTileOnTop(t);
+
+        if(t.zPosition == 4)
+        {
+            return true;
+        }
+
+        System.out.println("Right Side: " + isRightSide);
+        System.out.println("Left Side: " + isLeftSide);
+        System.out.println("Top: " + isTileOnTop);
+
+        System.out.println("Tile: (" + t.xPosition + ", " + t.yPosition + ")");
+
+        if((!isRightSide || !isLeftSide) && !isTileOnTop)
+            return true;
+        else
+            return false;
+    }
+
+    public boolean isTileOnRightSide(Tile t)
+    {
+        for(Tile tileToCheck : myModel.gameDeck)
+        {
+            if(tileToCheck.isVisible && tileToCheck.zPosition == t.zPosition)
+            {
+                if(t.xPosition == 1200)
+                    {
+                        if(t.yPosition == 400 || t.yPosition == 500)
+                        {
+                            if(tileToCheck.xPosition == 1300 && tileToCheck.yPosition == 450)
+                            {
+                                return true;
+                            }
+                        }
+                    }
+
+                if(t.xPosition + 100 == tileToCheck.xPosition && t.yPosition == tileToCheck.yPosition)
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    public boolean isTileOnLeftSide(Tile t)
+    {
+        for(Tile tileToCheck : myModel.gameDeck)
+        {
+            if(tileToCheck.isVisible && tileToCheck.zPosition == t.zPosition)
+            {
+                if(t.xPosition == 100)
+                {
+                    if(t.yPosition == 400 || t.yPosition == 500)
+                    {
+                        if(tileToCheck.xPosition == 0 && tileToCheck.yPosition == 450)
+                        {
+                            return true;
+                        }
+                    }
+                }
+                else if(t.xPosition == 1300 && t.yPosition == 450)
+                {
+                    if(tileToCheck.xPosition == 1200)
+                    {
+                        if(tileToCheck.yPosition == 400 || tileToCheck.yPosition == 500)
+                        {
+                            return true;
+                        }
+                    }
+                }
+                
+                if(t.xPosition - 100 == tileToCheck.xPosition && t.yPosition == tileToCheck.yPosition)
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    public boolean isTileOnTop(Tile t)
+    {
+        for(Tile tileToCheck : myModel.gameDeck)
+        {
+            if(t.zPosition == 3)
+            {
+                if(tileToCheck.zPosition == 4 && tileToCheck.isVisible)
+                {
+                    return true;
+                }
+            }
+        }
+        
+        return false;
     }
 
     public void mouseReleased(MouseEvent e){}

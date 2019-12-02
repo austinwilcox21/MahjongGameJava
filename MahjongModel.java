@@ -139,7 +139,7 @@ public class MahjongModel implements MouseListener
         Tile t;
 
         t = deal();
-        positionTile(t, 1300, 450, 450);
+        positionTile(t, 1300, 450, 0);
         gameDeck.add(t);
 
         t = deal();
