@@ -16,15 +16,21 @@ import javax.swing.border.*;
 public class Mahjong extends JFrame
 {
     private JPanel menuPanel = new JPanel();
+    private MahjongBoard referenceBoard;
+    private long gameNumber;
 
     public Mahjong() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(1700, 1000);
 
-        
+        Random rd = new Random();
+        gameNumber = rd.nextLong();
+
         add(menuPanel);
         makeMenu();
-        add(new MahjongBoard());
+
+        referenceBoard = new MahjongBoard(gameNumber);
+        add(referenceBoard);
         
         setVisible(true);
     }
@@ -46,11 +52,40 @@ public class Mahjong extends JFrame
          newGame.addActionListener(new ActionListener(){
              public void actionPerformed(ActionEvent e)
              {
-                new Mahjong();
+                remove(referenceBoard);
+                gameNumber = new Random().nextLong();
+                referenceBoard = new MahjongBoard(gameNumber);
+                add(referenceBoard);
+                setVisible(true);
              }
          });
-
          mainMenu.add(newGame);
+
+         JMenuItem undo = new JMenuItem("Undo");
+         undo.setToolTipText("Undo All Moves");
+         undo.addActionListener(new ActionListener(){
+             public void actionPerformed(ActionEvent e)
+             {
+                remove(referenceBoard);
+                referenceBoard = new MahjongBoard(gameNumber);
+                add(referenceBoard);
+                setVisible(true);
+             }
+         });
+         mainMenu.add(undo);
+
+         JMenuItem restart = new JMenuItem("Restart");
+         restart.setToolTipText("Restart Game");
+         restart.addActionListener(new ActionListener(){
+             public void actionPerformed(ActionEvent e)
+             {
+                remove(referenceBoard);
+                referenceBoard = new MahjongBoard(gameNumber);
+                add(referenceBoard);
+                setVisible(true);
+             }
+         });
+         mainMenu.add(restart);
     }
 
 }

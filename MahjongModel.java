@@ -68,6 +68,64 @@ public class MahjongModel implements MouseListener
         addWeirdTiles2();
     }
 
+    public MahjongModel(long magicNumber)
+    {
+        for (int i = 0; i < 4; i++)
+		{
+			// CharacterTiles
+			for (char c = '1'; c <= '9'; c++)
+				tiles.add(new CharacterTile(c));
+
+            tiles.add(new CharacterTile('N'));
+            tiles.add(new CharacterTile('E'));
+            tiles.add(new CharacterTile('W'));
+            tiles.add(new CharacterTile('S'));
+            tiles.add(new CharacterTile('C'));
+            tiles.add(new CharacterTile('F'));
+
+			// CircleTiles
+			for (int j = 1; j < 10; j++)
+                tiles.add(new CircleTile(j));
+
+			// BambooTiles
+			for (int j = 2; j < 10; j++)
+                tiles.add(new BambooTile(j));
+
+			// Special Tiles
+            tiles.add(new WhiteDragonTile());
+			tiles.add(new Bamboo1Tile());
+		}
+
+		// FlowerTiles
+		tiles.add(new FlowerTile("Chrysanthemum"));
+		tiles.add(new FlowerTile("Orchid"));
+		tiles.add(new FlowerTile("Plum"));
+		tiles.add(new FlowerTile("Bamboo"));
+
+		// SeasonTiles
+		tiles.add(new SeasonTile("Spring"));
+		tiles.add(new SeasonTile("Summer"));
+		tiles.add(new SeasonTile("Fall"));
+        tiles.add(new SeasonTile("Winter"));
+        
+        shuffle(magicNumber);
+
+        testAddTopLayer();
+        testAddFourthLayer();
+        testAddThirdLayer();
+        testAddSecondLayer();
+        addWeirdTiles();
+        addRow8();
+        addRow7();
+        addRow6();
+        addRow5();
+        addRow4();
+        addRow3();
+        addRow2();
+        addRow1();
+        addWeirdTiles2();
+    }
+
     public void positionTile(Tile t, int x, int y, int z)
     {
         t.xPosition = x;

@@ -18,6 +18,14 @@ public class MahjongBoard extends JPanel  implements MouseListener
         
     }
 
+    public MahjongBoard(long magicNumber)
+    {
+        myModel = new MahjongModel(magicNumber);
+
+        setLayout(null);
+        paintBoard();
+    }
+
     protected void paintComponent(Graphics g)
     {
         super.paintComponent(g);
